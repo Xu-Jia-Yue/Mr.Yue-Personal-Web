@@ -1,9 +1,10 @@
+@import '../../style/variables.scss';
 .home {
   width: 100%;
   height: 100%;
   flex: 1;
   position: relative;
-  background-color: rgb(68, 86, 167);
+  background-color: $bgColor;
   .title {
     height: 60%;
     font-size: 70px;
@@ -15,6 +16,20 @@
     .lastTitle {
       display: inline-block;
       margin-top: 70px;
+    }
+    .hand {
+      display: inline-block;
+      margin-right: 20px;
+      background: -webkit-linear-gradient(135deg, #0eaf6d, #ff6ac6 25%);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .mouse {
+      display: inline-block;
+      background: -webkit-linear-gradient(135deg, #0eaf6d, #ff6ac6 25%);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 40px;
     }
   }
   .iconList {
@@ -29,6 +44,7 @@
       color: white;
       font-weight: bold;
       font-size: 25px;
+      cursor: pointer;
       img {
         width: 70%;
         transition: all 0.2s;
@@ -36,6 +52,7 @@
       b {
         transition: all 0.2s;
         display: inline-block;
+        color: white;
       }
     }
     .item:hover img {

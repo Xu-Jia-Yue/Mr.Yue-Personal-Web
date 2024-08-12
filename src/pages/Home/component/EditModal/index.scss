@@ -1,0 +1,65 @@
+.dialogBox {
+  h1 {
+    background: -webkit-linear-gradient(
+      135deg,
+      #0eaf6d,
+      #ff6ac6 25%,
+      #147b96 50%,
+      #e6d205 55%,
+      #2cc4e0 60%,
+      #8b2ce0 80%,
+      #ff6384 95%,
+      #08dfb4
+    );
+    /* 文字颜色填充设置为透明 */
+    -webkit-text-fill-color: transparent;
+    /* 背景裁剪，即让文字使用背景色 */
+    background-clip: text;
+    /* 背景图放大一下，看着柔和一些 */
+    background-size: 200% 100%;
+    /* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
+    animation: flowCss 12s infinite linear;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  @keyframes flowCss {
+    0% {
+      /* 移动背景位置 */
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: -400% 0;
+    }
+  }
+
+  h1:hover {
+    animation: flowCss 4s infinite linear;
+  }
+  .setbg {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    span {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    .active {
+      box-shadow: black 0px 0px 10px;
+      border: 2px solid white;
+    }
+    .otherActive {
+      filter: brightness(70%);
+    }
+  }
+}
