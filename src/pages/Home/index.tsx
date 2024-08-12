@@ -8,6 +8,7 @@ import like from '@/images/点赞svg.png'
 import DialogBox from '@/pages/Home/component/EditModal'
 import { useState } from 'react'
 import 'animate.css'
+import LikeFn from './util/useLIke'
 
 export default function Home() {
   const [show, setShow] = useState({ flag: false, num: 1 })
@@ -20,8 +21,7 @@ export default function Home() {
       {/* 入站标题 */}
       <div className='title'>
         <span>
-          ( ^
-          <span className='mouse animate__animated animate__shakeX'>３</span>
+          ( ^<span className='mouse animate__animated animate__shakeX'>３</span>
           ^ ) <span className='hand animate__animated animate__shakeY'>╱</span>
           Hey Bro
         </span>
@@ -64,7 +64,7 @@ export default function Home() {
           <br />
           <b>设置</b>
         </div>
-        <div className='item'>
+        <div className='item' onClick={(e) => LikeFn(e)}>
           <img src={like} alt={'点赞'} />
           <br />
           <b>点赞</b>

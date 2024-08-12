@@ -54,6 +54,7 @@ const DialogBox = (props: Props) => {
                 style={{ backgroundColor: item }}
                 onClick={() => toggleBg(item, index)}
                 className={active === index ? 'active' : 'otherActive'}
+                key={index}
               ></span>
             )
           })}

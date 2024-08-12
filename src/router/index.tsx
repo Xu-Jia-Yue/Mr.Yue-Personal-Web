@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createBrowserRouter } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
+import Loading from '@/components/Loading'
 
 const Home = lazy(() => import('@/pages/Home'))
 const Blog = lazy(() => import('@/pages/Blog'))
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: (
-      <Suspense fallback={<div>Loading....</div>}>
+      <Suspense fallback={<Loading />}>
         <Layout />
       </Suspense>
     ),
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: (
-          <Suspense fallback={<div>Loading....</div>}>
+          <Suspense fallback={<Loading />}>
             <Home />
           </Suspense>
         ),
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: 'blog',
         element: (
-          <Suspense fallback={<div>Loading....</div>}>
+          <Suspense fallback={<Loading />}>
             <Blog />
           </Suspense>
         ),
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: 'code',
         element: (
-          <Suspense fallback={<div>Loading....</div>}>
+          <Suspense fallback={<Loading />}>
             <Code />
           </Suspense>
         ),
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: (
-          <Suspense fallback={<div>Loading....</div>}>
+          <Suspense fallback={<Loading />}>
             <About />
           </Suspense>
         ),
@@ -53,8 +54,8 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element:<div>404.。。。。</div>
-  }
+    element: <div>404.。。。。</div>,
+  },
 ])
 
 export default router

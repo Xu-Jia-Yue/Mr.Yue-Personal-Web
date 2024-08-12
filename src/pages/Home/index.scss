@@ -79,4 +79,42 @@
       color: orange;
     }
   }
+  .heart {
+    position: fixed;
+    opacity: 1;
+    scale: 3;
+    width: 10px;
+    height: 10px;
+    background: red;
+    transform: rotate(45deg);
+  }
+
+  .heart:after,
+  .heart:before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .heart:after {
+    top: -5px;
+  }
+
+  .heart:before {
+    left: -5px;
+  }
+
+  @keyframes move {
+    100% {
+      transform: translateY(-100px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+
+  button {
+    margin: 300px 300px;
+  }
 }
