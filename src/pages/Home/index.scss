@@ -14,8 +14,22 @@
     padding-top: 70px;
     box-sizing: border-box;
     .lastTitle {
+      font-family: 'Lucida Console', 'Courier New', monospace;
       display: inline-block;
       margin-top: 70px;
+      background: -webkit-linear-gradient(left, #0f0, #00f) 0 0 no-repeat;
+      background-size: 160px;
+      background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+      animation: shine 3s infinite;
+      @keyframes shine {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
+      }
     }
     .hand {
       display: inline-block;
@@ -23,6 +37,17 @@
       background: -webkit-linear-gradient(135deg, #0eaf6d, #ff6ac6 25%);
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      animation: handup 1s infinite linear;
+      animation-direction: alternate;
+      transform-origin: left center;
+      @keyframes handup {
+        0% {
+          transform: rotate(-30deg);
+        }
+        100% {
+          transform: rotate(20deg);
+        }
+      }
     }
     .mouse {
       display: inline-block;
@@ -30,6 +55,10 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       font-size: 40px;
+    }
+    .hey {
+      font-family: 'Lucida Console', 'Courier New', monospace;
+      display: inline-block;
     }
   }
   .iconList {

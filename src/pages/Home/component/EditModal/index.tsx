@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { message, Modal } from 'antd'
 import './index.scss'
+import { randomColor } from '@/util/useRandomColor'
+
 type Props = {
   isShow: {
     flag: boolean
@@ -20,7 +22,14 @@ const DialogBox = (props: Props) => {
   }
 
   // 背景颜色列表
-  const colorList = ['#4456a7', '#44a75e', '#a74444', '#474747', '#8f3eb0']
+  const colorList = [
+    '#4456a7',
+    '#44a75e',
+    '#a74444',
+    '#474747',
+    '#8f3eb0',
+    '#ffffff',
+  ]
   // 选中颜色 active
   const [active, setActive] = useState(0)
   // 按下确定修改颜色
@@ -28,7 +37,11 @@ const DialogBox = (props: Props) => {
 
   const toggleBg = (color: string, i: number) => {
     setActive(i)
-    setYes(color)
+    if (i === 5) {
+      setYes(randomColor())
+    } else {
+      setYes(color)
+    }
   }
 
   const handleOk = () => {

@@ -1,9 +1,10 @@
+@import '../../style/variables.scss';
 .loading_container {
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: #fff6e3;
+  background: $bgColor;
   display: flex;
   align-items: center;
   justify-content: center;

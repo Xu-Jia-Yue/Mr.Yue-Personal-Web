@@ -1,7 +1,6 @@
 // import React from 'react'
+import './index.scss'
 
 export default function Code() {
-  return (
-    <div>Code</div>
-  )
+  return <div className='code'>Code</div>
 }

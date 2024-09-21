@@ -1,0 +1,19 @@
+.like {
+  width: 550px;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+  background-color: rgb(255, 109, 142);
+  border: 5px solid white;
+  color: aliceblue;
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin:  10px auto;
+}
+.animate__fadeInTopLeft{
+margin-right: 2000px;
+}

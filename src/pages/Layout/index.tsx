@@ -1,7 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import './index.scss'
-import logo from '@/images/icon2.png'
-import { FieldTimeOutlined } from '@ant-design/icons'
+import logo from '@/images/神秘人.png'
 import dayjs from 'dayjs'
 import { useEffect, useState } from 'react'
 
@@ -36,7 +35,7 @@ export default function Layout() {
           })}
         </ul>
         <div className='nav-date'>
-          <FieldTimeOutlined className='timeIcon' />
+          <img src='/src/images/时间.png' alt='' className='timeIcon' />
           <div className='time'>{nowTime}</div>
         </div>
       </div>

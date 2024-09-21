@@ -1,9 +1,14 @@
 /* 重置默认样式 */
+@font-face {
+  font-family: electronicFont;
+  src: url('/src/images/DS-DIGIT.TTF');
+}
+
 html,
 body {
   margin: 0px;
   padding: 0px;
-  /* color: #333; */
+  box-sizing: border-box;
 }
 
 p {

@@ -9,11 +9,24 @@ import DialogBox from '@/pages/Home/component/EditModal'
 import { useState } from 'react'
 import 'animate.css'
 import LikeFn from './util/useLIke'
+import Like from '@/components/Like'
+import Detail from './component/DetailModal'
 
 export default function Home() {
-  const [show, setShow] = useState({ flag: false, num: 1 })
+  const [boxShow, setShow] = useState({ flag: false, num: 1 })
+  const [likeShow, setLikeShow] = useState({ flag: false, num: 1 })
+  const [detailShow, setDetailShow] = useState({ flag: false, num: 1 })
   const toggleBox = () => {
     setShow({ flag: true, num: Math.random() })
+  }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const toggleLike = (e: any) => {
+    setLikeShow({ flag: true, num: Math.random() })
+    LikeFn(e)
+  }
+
+  const toggleDetail = () => {
+    setDetailShow({ flag: true, num: Math.random() })
   }
 
   return (
@@ -21,16 +34,16 @@ export default function Home() {
       {/* 入站标题 */}
       <div className='title'>
         <span>
-          ( ^<span className='mouse animate__animated animate__shakeX'>３</span>
-          ^ ) <span className='hand animate__animated animate__shakeY'>╱</span>
-          Hey Bro
+          (๑^
+          <span className='mouse animate__animated animate__shakeX'>o</span>
+          ^๑)づ<span className='hand animate__animated animate__shakeY'>♡</span>
+          <span className='hey animate__animated animate__flip'>Hey Bro</span>
         </span>
         <br />
-        <span className='lastTitle animate__animated animate__tada'>
+        <span className='animate__animated animate__tada lastTitle'>
           Welcome To This Website !!!
         </span>
       </div>
-
       {/* 底部导航 */}
       <div className='iconList'>
         <div className='item'>
@@ -44,17 +57,21 @@ export default function Home() {
           </a>
         </div>
         <div className='item'>
-          <a href='https://blog.csdn.net/Lil_y1?spm=1000.2115.3001.5343'></a>
-          <img src={github} alt={'github'} />
-          <br />
-          <b>github</b>
+          <a
+            href='https://blog.csdn.net/Lil_y1?spm=1000.2115.3001.5343'
+            target='_blank'
+          >
+            <img src={github} alt={'github'} />
+            <br />
+            <b>github</b>
+          </a>
         </div>
         <div className='item' onClick={() => window.location.reload()}>
           <img src={refresh} alt={'刷新'} />
           <br />
           <b>刷新</b>
         </div>
-        <div className='item'>
+        <div className='item' onClick={toggleDetail}>
           <img src={detail} alt={'说明'} />
           <br />
           <b>说明</b>
@@ -64,7 +81,7 @@ export default function Home() {
           <br />
           <b>设置</b>
         </div>
-        <div className='item' onClick={(e) => LikeFn(e)}>
+        <div className='item' onClick={(e: unknown) => toggleLike(e)}>
           <img src={like} alt={'点赞'} />
           <br />
           <b>点赞</b>
@@ -87,7 +104,9 @@ export default function Home() {
       </footer>
 
       {/* 对话框 */}
-      <DialogBox isShow={show} />
+      <DialogBox isShow={boxShow} />
+      <Like isShow={likeShow} />
+      <Detail isShow={detailShow} />
     </div>
   )
 }
