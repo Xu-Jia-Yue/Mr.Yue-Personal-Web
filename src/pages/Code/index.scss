@@ -1,9 +1,95 @@
+@import '../../style/variables.scss';
+
 .code {
-  width: 85%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   flex: 1;
-  margin: 30px auto;
+  position: relative;
+  background-color: $bgColor;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  h2 {
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    margin: 30px;
+    animation-duration: 1s;
+  }
+  .codeContent {
+    display: flex;
+    .item {
+      cursor: pointer;
+      width: 120px;
+      height: 120px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      margin-left: 50px;
+      transition: all .3s;
+      img {
+        width: 90px;
+        height: 90px;
+      }
+      span {
+        display: inline-block;
+      }
+    }
+    .item:hover {
+      transform: translateY(-10px);
+      transform: translateY(-3px);
+      text-shadow: black 2px 4px;
+    }
+  }
+  .VuePro {
+    border-bottom: 1px solid;
+    flex: 4;
+  }
+  .ReactPro {
+    flex: 4;
+    border-bottom: 1px solid;
+  }
+  .more {
+    flex: 4;
+    .view {
+      width: 200px;
+      height: 70px;
+      line-height: 70px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin: 30px;
+      cursor: pointer;
+      .allow {
+        display: inline-block;
+        font-size: 20px;
+        color: orange;
+        margin-top: 30px;
+        border: 4px solid rgb(142, 137, 236);
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        margin: 0px auto;
+        border-radius: 100px;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+      .text {
+        color: rgb(180, 187, 220);
+        transition: all 0.3s;
+      }
+    }
+    .view:hover .allow {
+      background-color: rgb(142, 137, 236);
+      color: rgb(255, 255, 255);
+    }
+    .view:hover .text {
+      color: rgb(255, 255, 255);
+    }
+  }
 }
