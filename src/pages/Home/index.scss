@@ -17,11 +17,39 @@
       font-family: 'Lucida Console', 'Courier New', monospace;
       display: inline-block;
       margin-top: 70px;
-      background: -webkit-linear-gradient(left, #0f0, #00f) 0 0 no-repeat;
+      background: -webkit-linear-gradient(left, #0f0, rgb(255, 106, 198)) 0 0
+        no-repeat;
       background-size: 160px;
       background-clip: text;
       -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-      animation: shine 3s infinite;
+      width: 15em;
+      height: 1.25em;
+      border-right: 1px solid transparent;
+      animation: typing 3.5s steps(20, end), blink-caret 0.75s step-end infinite,
+        shine 3s infinite;
+      font-family: Consolas, Monaco;
+      word-break: break-all;
+      overflow: hidden;
+      /* 打印效果 */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 15em;
+        }
+      }
+      /* 光标闪啊闪 */
+      @keyframes blink-caret {
+        from,
+        to {
+          box-shadow: 1px 0 0 0 transparent;
+        }
+        50% {
+          box-shadow: 1px 0 0 0;
+        }
+      }
+      // 背景颜色闪烁
       @keyframes shine {
         0% {
           background-position: 0 0;

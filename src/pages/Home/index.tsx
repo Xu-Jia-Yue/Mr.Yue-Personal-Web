@@ -58,7 +58,7 @@ export default function Home() {
         </div>
         <div className='item'>
           <a
-            href='https://blog.csdn.net/Lil_y1?spm=1000.2115.3001.5343'
+            href='https://github.com/Xu-Jia-Yue'
             target='_blank'
           >
             <img src={github} alt={'github'} />

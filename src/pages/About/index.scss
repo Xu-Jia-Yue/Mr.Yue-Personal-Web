@@ -1,9 +1,213 @@
+@import '/src/style/variables.scss';
 .about {
-  width: 85%;
+  width: 90%;
   height: 90%;
   flex: 1;
   margin: 30px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  .left,
+  .right {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: erikos, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB,
+      Hiragino Sans GB W3, WenQuanYi Micro Hei, sans-serif;
+    .where,
+    .mail,
+    .weChat,
+    .github {
+      width: 380px;
+      height: 230px;
+      border-radius: 20px;
+      h3 {
+        background-color: white;
+        text-align: center;
+        font-weight: bold;
+        line-height: 50px;
+        border-radius: 20px 20px 0px 0px;
+      }
+      .main {
+        height: 180px;
+        border-top: 1px solid;
+        border-radius: 0px 0px 20px 20px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .where {
+      background-color: rgb(47, 210, 219);
+      h4 {
+        width: 230px;
+        font-family: 'Lucida Console', 'Courier New', monospace;
+        font-weight: bold;
+        font-size: 40px;
+        border: 1px solid;
+        text-align: center;
+        margin: 30px auto;
+        color: rgb(47, 210, 219);
+        background-color: white;
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+    .mail {
+      text-align: center;
+      background-color: rgb(255, 133, 187);
+      border: 1px solid;
+      img {
+        margin-top: 20px;
+      }
+      h4 {
+        font-family: erikos, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB,
+          Hiragino Sans GB W3, WenQuanYi Micro Hei, sans-serif;
+        font-weight: 900;
+      }
+    }
+    .github {
+      text-align: center;
+      background-color: rgb(129, 126, 248);
+      border: 1px solid;
+      img {
+        margin-top: 20px;
+      }
+      h4 {
+        font-weight: 900;
+      }
+    }
+    .weChat {
+      text-align: center;
+      background-color: rgb(255, 208, 63);
+      border: 1px solid;
+      img {
+        margin-top: 20px;
+      }
+      h4 {
+        font-weight: 900;
+      }
+    }
+  }
+  .introduce {
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgb(148, 68, 181);
+    .clouds {
+      height: 160px;
+      position: relative;
+      border-top: 1px solid;
+      .item1,
+      .item2,
+      .item3,
+      .item4,
+      .item5 {
+        width: 130px;
+        position: absolute;
+        h4 {
+          font-weight: bold;
+          font-size: 25px;
+          position: absolute;
+          top: 45%;
+          left: 14%;
+          animation-duration: .8s;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      .item1 {
+        width: 120px;
+        top: 20px;
+        left: 20px;
+      }
+      .item2 {
+        width: 100px;
+        top: 80px;
+        left: 130px;
+        font-size: 25px;
+      }
+      .item3 {
+        top: 20px;
+        width: 140px;
+        left: 230px;
+        h4 {
+          top: 50%;
+          left: 8%;
+        }
+      }
+      .item4 {
+        width: 100px;
+        top: 80px;
+        left: 370px;
+        font-size: 25px;
+      }
+      .item5 {
+        width: 100px;
+        top: 20px;
+        left: 470px;
+        font-size: 25px;
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+    h3 {
+      background-color: white;
+      text-align: center;
+      font-weight: bold;
+      line-height: 50px;
+      border-radius: 20px 20px 0px 0px;
+    }
+    .sentence {
+      display: flex;
+      .tx {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin: 50px 40px;
+      }
+      .dialog {
+        height: 70px;
+        width: 300px;
+        border-radius: 5px;
+        background-color: white;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 10%;
+        margin-left: -20px;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        .sx {
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          right: 10px;
+          top: 60px;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+        .sx:hover {
+          transform: rotate(180deg);
+        }
+      }
+
+      .dialog:before {
+        width: 0px;
+        height: 0px;
+        content: '';
+        border-top: 30px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 20px solid white;
+        position: absolute;
+        top: 30px;
+        left: -10px;
+      }
+    }
+  }
 }
