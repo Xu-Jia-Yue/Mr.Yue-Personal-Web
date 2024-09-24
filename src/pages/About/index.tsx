@@ -72,7 +72,7 @@ export default function About() {
           <h3>WeChat</h3>
           <div className='main'>
             <img src='/src/images/myWeChat.jpg' alt='' />
-            <h4>XJY--Luckey</h4>
+            <h4>XJY--Lucky</h4>
           </div>
         </div>
         <div className='github'>
