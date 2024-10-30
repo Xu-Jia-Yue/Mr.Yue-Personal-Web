@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createBrowserRouter } from 'react-router-dom'
+import { createHashRouter } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import Loading from '@/components/Loading'
 
@@ -9,7 +9,7 @@ const Code = lazy(() => import('@/pages/Code'))
 const About = lazy(() => import('@/pages/About'))
 const Layout = lazy(() => import('@/pages/Layout'))
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: (
