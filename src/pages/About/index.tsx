@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react'
+import xf from '@/images/信封.png'
 import './index.scss'
 import 'animate.css'
 import { getLoveSay } from '@/util/useGetLovesay'
+import cloud from '@/images/cloud.png'
+import myPhoto from '@/images/myPhoto.jpg'
+import sx from '@/images/lover刷新.png'
+import wechat from '@/images/myWeChat.jpg'
+import git from '@/images/mygit.png'
 
 export default function About() {
   const [loveSay, setLovesay] = useState('')
@@ -26,7 +32,7 @@ export default function About() {
           <h3>Mail</h3>
           <div className='main'>
             <img
-              src='/src/images/信封.png'
+              src={xf}
               alt=''
               className='animate__fadeInLeft animate__animated'
             />
@@ -38,52 +44,47 @@ export default function About() {
         <h3>About Me</h3>
         <div className='clouds'>
           <div className='item1'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#水瓶座</h4>
           </div>
           <div className='item2'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#00后</h4>
           </div>
           <div className='item3'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#前端新秀</h4>
           </div>
           <div className='item4'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#嘻哈</h4>
           </div>
           <div className='item5'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#伪文艺</h4>
           </div>
           <div className='item6'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#INFP</h4>
           </div>
           <div className='item7'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#现实主义</h4>
           </div>
           <div className='item8'>
-            <img src='/src/images/cloud.png' alt='' />
+            <img src={cloud} alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#闷骚</h4>
           </div>
         </div>
         <div className='sentence'>
           <img
-            src='/src/images/myPhoto.jpg'
+            src={myPhoto}
             alt=''
             className='tx animate__animated animate__rotateIn'
           />
           <div className='dialog'>
             <p className='LoverContent'>{loveSay}</p>
-            <img
-              src='/src/images/lover刷新.png'
-              alt=''
-              onClick={setLover}
-              className='sx'
-            />
+            <img src={sx} alt='' onClick={setLover} className='sx' />
           </div>
         </div>
         <p className='footerText'>乌托邦的现实主义</p>
@@ -92,7 +93,7 @@ export default function About() {
         <div className='weChat'>
           <h3>WeChat</h3>
           <div className='main'>
-            <img src='/src/images/myWeChat.jpg' alt='' />
+            <img src={wechat} alt='' />
             <h4>XJY--Lucky</h4>
           </div>
         </div>
@@ -100,7 +101,7 @@ export default function About() {
           <h3>GitHub</h3>
           <div className='main'>
             <img
-              src='/src/images/mygit.png'
+              src={git}
               alt=''
               className='animate__fadeInRight animate__animated'
             />
