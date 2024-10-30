@@ -29,7 +29,7 @@ const Detail = (props: Props) => {
     >
       <div className='logo'>
         <div className='imgBox'>
-          <img src='/src/images/神秘人.png' alt='' />
+          <img src='/src/images/TitleLogo.png' alt='' />
         </div>
         <h3>Mr.Yue Personal Web</h3>
         <h4>V1.0.0</h4>

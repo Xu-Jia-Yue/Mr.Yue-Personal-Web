@@ -25,7 +25,11 @@ export default function About() {
         <div className='mail'>
           <h3>Mail</h3>
           <div className='main'>
-            <img src='/src/images/信封.png' alt='' />
+            <img
+              src='/src/images/信封.png'
+              alt=''
+              className='animate__fadeInLeft animate__animated'
+            />
             <h4>2338699727@QQ.com</h4>
           </div>
         </div>
@@ -53,9 +57,25 @@ export default function About() {
             <img src='/src/images/cloud.png' alt='' />
             <h4 className='animate__animated animate__zoomInDown'>#伪文艺</h4>
           </div>
+          <div className='item6'>
+            <img src='/src/images/cloud.png' alt='' />
+            <h4 className='animate__animated animate__zoomInDown'>#INFP</h4>
+          </div>
+          <div className='item7'>
+            <img src='/src/images/cloud.png' alt='' />
+            <h4 className='animate__animated animate__zoomInDown'>#现实主义</h4>
+          </div>
+          <div className='item8'>
+            <img src='/src/images/cloud.png' alt='' />
+            <h4 className='animate__animated animate__zoomInDown'>#闷骚</h4>
+          </div>
         </div>
         <div className='sentence'>
-          <img src='/src/images/myPhoto.jpg' alt='' className='tx' />
+          <img
+            src='/src/images/myPhoto.jpg'
+            alt=''
+            className='tx animate__animated animate__rotateIn'
+          />
           <div className='dialog'>
             <p className='LoverContent'>{loveSay}</p>
             <img
@@ -66,6 +86,7 @@ export default function About() {
             />
           </div>
         </div>
+        <p className='footerText'>乌托邦的现实主义</p>
       </div>
       <div className='right'>
         <div className='weChat'>
@@ -78,7 +99,11 @@ export default function About() {
         <div className='github'>
           <h3>GitHub</h3>
           <div className='main'>
-            <img src='/src/images/mygit.png' alt='' />
+            <img
+              src='/src/images/mygit.png'
+              alt=''
+              className='animate__fadeInRight animate__animated'
+            />
             <h4>https://github.com/Xu-Jia-Yue</h4>
           </div>
         </div>

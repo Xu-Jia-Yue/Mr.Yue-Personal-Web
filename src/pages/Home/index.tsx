@@ -46,43 +46,64 @@ export default function Home() {
       </div>
       {/* 底部导航 */}
       <div className='iconList'>
-        <div className='item'>
+        <div className='item '>
           <a
             href='https://blog.csdn.net/Lil_y1?spm=1000.2115.3001.5343'
             target='_blank'
           >
-            <img src={csnd} alt={'csdn'} />
+            <img
+              src={csnd}
+              alt={'csdn'}
+              className='animate__animated animate__rotateIn'
+            />
             <br />
             <b>csnd</b>
           </a>
         </div>
         <div className='item'>
-          <a
-            href='https://github.com/Xu-Jia-Yue'
-            target='_blank'
-          >
-            <img src={github} alt={'github'} />
+          <a href='https://github.com/Xu-Jia-Yue' target='_blank'>
+            <img
+              src={github}
+              alt={'github'}
+              className='animate__animated animate__rotateIn'
+            />
             <br />
             <b>github</b>
           </a>
         </div>
         <div className='item' onClick={() => window.location.reload()}>
-          <img src={refresh} alt={'刷新'} />
+          <img
+            src={refresh}
+            alt={'刷新'}
+            className='animate__animated animate__rotateIn'
+          />
           <br />
           <b>刷新</b>
         </div>
         <div className='item' onClick={toggleDetail}>
-          <img src={detail} alt={'说明'} />
+          <img
+            src={detail}
+            alt={'说明'}
+            className='animate__animated animate__rotateIn'
+          />
           <br />
           <b>说明</b>
         </div>
         <div className='item' onClick={toggleBox}>
-          <img src={edit} alt={'设置'} />
+          <img
+            src={edit}
+            alt={'设置'}
+            className='animate__animated animate__rotateIn'
+          />
           <br />
           <b>设置</b>
         </div>
         <div className='item' onClick={(e: unknown) => toggleLike(e)}>
-          <img src={like} alt={'点赞'} />
+          <img
+            src={like}
+            alt={'点赞'}
+            className='animate__animated animate__rotateIn'
+          />
           <br />
           <b>点赞</b>
         </div>

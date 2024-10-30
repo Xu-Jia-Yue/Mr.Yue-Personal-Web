@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import './index.scss'
-import logo from '@/images/神秘人.png'
+import logo from '@/images/TitleLogo.png'
 import dayjs from 'dayjs'
 import { useEffect, useState } from 'react'
 

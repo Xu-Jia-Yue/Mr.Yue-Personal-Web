@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid;
   .blogList {
     display: flex;
     flex-wrap: wrap;
@@ -26,10 +25,11 @@
       background-color: white;
       border-left: 5px solid;
       h4 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         line-height: 50px;
-        font-size: 25px;
-        font-weight: 200;
-        border-bottom: 1px rgb(238, 238, 238) dashed;
+        border-bottom: 2px rgb(238, 238, 238) dashed;
       }
       p {
         flex: 1;

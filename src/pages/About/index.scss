@@ -98,14 +98,16 @@
     border-radius: 20px;
     background-color: rgb(148, 68, 181);
     .clouds {
-      height: 160px;
+      height: 200px;
       position: relative;
-      border-top: 1px solid;
       .item1,
       .item2,
       .item3,
       .item4,
-      .item5 {
+      .item5,
+      .item6,
+      .item7,
+      .item8 {
         width: 130px;
         position: absolute;
         h4 {
@@ -114,7 +116,7 @@
           position: absolute;
           top: 45%;
           left: 14%;
-          animation-duration: .8s;
+          animation-duration: 0.8s;
         }
         img {
           width: 100%;
@@ -153,6 +155,37 @@
         font-size: 25px;
         h4 {
           font-size: 20px;
+        }
+      }
+      .item6 {
+        width: 100px;
+        top: 120px;
+        left: 20px;
+        font-size: 25px;
+        h4 {
+          font-size: 20px;
+        }
+      }
+      .item7 {
+        width: 140px;
+        top: 120px;
+        left: 230px;
+        font-size: 25px;
+        h4 {
+          font-size: 23px;
+          top: 50%;
+          left: 12%;
+        }
+      }
+      .item8 {
+        width: 110px;
+        top: 110px;
+        left: 470px;
+        font-size: 25px;
+        h4 {
+          font-size: 24px;
+          top: 50%;
+          left: 16%;
         }
       }
     }
@@ -208,6 +241,13 @@
         top: 30px;
         left: -10px;
       }
+    }
+    .footerText {
+      font-size: 15px;
+      text-align: center;
+      color: rgba(238, 238, 238, 0.3);
+      font-family: 'Lucida Console', 'Courier New', monospace;
+      font-weight: bold;
     }
   }
 }
